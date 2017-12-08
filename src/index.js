@@ -14,7 +14,7 @@ const setState = (newState) => {
   state = { ...state, ...newState }
   if (newState.favEmojis) {
     localStorage.setItem('favEmojis', JSON.stringify(newState.favEmojis))
-    render(100)
+    render(10)
   } else {
     render(300)
   }
@@ -65,7 +65,6 @@ const showEmojiList = () => {
 const render = (ms) => {
   const { searchText } = state;
   imageList.classList.add('pre-animation')
-  console.log(state)
   setTimeout(() => {
     if (searchText === '') {
       imageList.innerHTML = showFavorites()
@@ -81,10 +80,12 @@ const inputStream = Bacon
   .fromEvent(searchInput, 'input')
   // Wait 300 ms between events
   .debounce(300)
+  // Get the input value
+  .map(e => e.target.value)
 
 // Re-render list on each value received from the input stream
-inputStream.onValue((e) => {
-  setState({ searchText: e.target.value })
+inputStream.onValue(searchText => {
+  setState({ searchText })
 })
 
 const clickStream = Bacon
@@ -123,7 +124,7 @@ const showFavorites = () => {
 
   const firstItem = `
     <div class='item'>
-      <p> <strong> Your Favorites </strong> </p>
+      <p> <strong> Tap or click to remove from favorites </strong> </p>
     </div>`
 
   return emojiList.length === 0 ?

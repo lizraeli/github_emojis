@@ -7,7 +7,9 @@
   content: " \2729 ";
 }
 
-
+.emoji:hover {
+  cursor: pointer;
+}
 
 html {
   box-sizing: border-box;
@@ -20,7 +22,7 @@ html {
   border-color: #AAAAAA;
   border-radius: 0.5em;
   border-style: solid;
-  width: 25%;
+  width: 30%;
   margin: auto;
   text-align: center;
 }
@@ -43,11 +45,22 @@ html {
   padding: 0.3em;
 }
 
+/* #clearBtn {
+  width: 10%;
+  border-radius: 0.1em;
+  font-size: 1.5em;
+  padding: 0.3em;
+} */
 #searchInput:focus {
   background-color: lightblue;
 }
  
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+  /* #btn-container{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; 
+  } */
   body {
     margin: 0;
     padding: 0

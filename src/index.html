@@ -18,15 +18,14 @@
 <body>
   <div id="container">
     <h2 class="header"> Github Emoji Search</h2>
-    <p>
-      <input id="searchInput" type="text"> 
-    </p>
+    <p id="btn-container">
+      <input id="searchInput" type="search" autofocus>
     <div id="imageList"></div>
   </div>
 
 
   
-  <!-- <script>
+  <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('/sw.js').then(function (registration) {
@@ -38,7 +37,7 @@
         });
       });
     }
-  </script> -->
+  </script>
   <script src="app.bundle.js"></script>
 </body>
 
