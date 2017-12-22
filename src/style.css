@@ -1,5 +1,6 @@
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -11,15 +12,19 @@
   cursor: pointer;
 }
 
+#show-fav:hover {
+  cursor: pointer;
+}
+
 html {
   box-sizing: border-box;
   overflow: scroll;
-  font-family: 'Lato', sans-serif;  
+  font-family: "Lato", sans-serif;
 }
 
 #container {
   background-color: snow;
-  border-color: #AAAAAA;
+  border-color: #aaaaaa;
   border-radius: 0.5em;
   border-style: solid;
   width: 30%;
@@ -35,7 +40,7 @@ html {
   margin-bottom: 1em;
   border-style: solid;
   border-width: 0.1em;
-  border-color: #AAAAAA;
+  border-color: #aaaaaa;
 }
 
 #searchInput {
@@ -54,7 +59,7 @@ html {
 #searchInput:focus {
   background-color: lightblue;
 }
- 
+
 @media only screen and (max-width: 768px) {
   /* #btn-container{
     width: 75%;
@@ -63,11 +68,11 @@ html {
   } */
   body {
     margin: 0;
-    padding: 0
+    padding: 0;
   }
   #container {
     width: 100%;
-    margin:0;
+    margin: 0;
     border-style: none;
   }
   #searchInput {

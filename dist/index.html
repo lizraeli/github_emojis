@@ -8,8 +8,9 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://s3.amazonaws.com/ https://api.github.com https://use.fontawesome.com;">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
+
   <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Github Emoji Search</title>
@@ -18,13 +19,18 @@
 <body>
   <div id="container">
     <h2 class="header"> Github Emoji Search</h2>
+
+    <div id="show-fav">
+      Show favorites
+      <i class="far fa-star"> </i>
+    </div>
     <p id="btn-container">
       <input id="searchInput" type="search" autofocus>
-    <div id="imageList"></div>
+      <div id="imageList"></div>
   </div>
 
 
-  
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
